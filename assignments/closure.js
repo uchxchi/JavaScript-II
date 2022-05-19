@@ -61,15 +61,16 @@ console.log(myCounter())
 // ==== Challenge 4: Create a counter function with an object that can increment and decrement ====
 const counterFactory = () => {
   let size = 0;
- return bigO = 
-     function increment(){
+ return  {
+     increment: function(){
       size++;
       return size;
-    };
-    function decrement(){
+    },
+    decrement: function(){
       size--;
       return size;
-    };
+    },
+  }
  }
     
   
@@ -79,6 +80,9 @@ const counterFactory = () => {
 
 
 let counterHost = counterFactory();
-console.log(counterHost());
-console.log(counterHost());
-console.log(counterHost());
+console.log(counterHost.increment());
+console.log(counterHost.increment());
+console.log(counterHost.increment());
+console.log(counterHost.decrement());
+console.log(counterHost.decrement());
+console.log(counterHost.decrement());
